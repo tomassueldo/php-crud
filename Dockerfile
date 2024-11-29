@@ -21,6 +21,3 @@ COPY . /var/www/html/
 
 # Establecer el directorio de trabajo
 WORKDIR /var/www/html/
-
-# Ejecutar Composer install automáticamente
-RUN composer install --no-dev --optimize-autoloader

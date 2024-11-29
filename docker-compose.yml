@@ -16,6 +16,7 @@ services:
       DB_NAME: crud_db
       DB_USER: root
       DB_PASSWORD: root
+    container_name: my_php_app_container
 
   db:
     image: mysql:8.0
@@ -42,7 +43,6 @@ services:
     environment:
       - PMA_ARBITRARY=1
     container_name: my_phpmyadmin_container
-
 
 volumes:
   db_data:

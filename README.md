@@ -1,6 +1,7 @@
 # CRUD PHP
 
-Este proyecto es una aplicación CRUD desarrollada en PHP, utilizando un entorno Dockerizado con soporte para phpMyAdmin para la gestión de la base de datos.
+Este proyecto es una aplicación CRUD desarrollada en PHP, utilizando un entorno Dockerizado con soporte para phpMyAdmin
+para la gestión de la base de datos.
 
 ## Características
 
@@ -15,7 +16,8 @@ Este proyecto es una aplicación CRUD desarrollada en PHP, utilizando un entorno
 Asegúrate de tener instalados los siguientes programas:
 
 - [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/) (solo si usas Linx, ya que viene instalado por defecto en docker desktop app de windows/mac )
+- [Docker Compose](https://docs.docker.com/compose/install/) (solo si usas Linx, ya que viene instalado por defecto en
+  docker desktop app de windows/mac )
 
 ---
 
@@ -36,14 +38,35 @@ Ejecuta el siguiente comando en la raíz del proyecto:
  docker-compose up --build -d
 ```
 
+### 3. Instalar dependencias con Composer
+
+Después de iniciar los contenedores, debes instalar las dependencias de PHP con Composer. Para ello, accede al
+contenedor de tu aplicación y ejecuta el siguiente comando:
+
+```bash
+docker exec -it my_php_app_container composer install
+```
+
 Este comando construirá y ejecutará los servicios definidos en el archivo `docker-compose.yml`.
 
-### 3. Acceso a la Aplicación
+### 4. Acceso a la Aplicación
 
-- **Frontend (CRUD)**: [http://localhost:8080](http://localhost:8080)
+- **Frontend (CRUD)**: [http://localhost:8080/formulario](http://localhost:8080/formulario)
 - **phpMyAdmin**: [http://localhost:9002](http://localhost:9002)
 
-### 4. Credenciales de phpMyAdmin
+----
+
+#### Endpoints:
+
+```diff
+ - GET /formulario (vista del formulario)
+ - POST /formulario (store)
+ - GET /formulario/list (listado de formularios cargados)
+ - PUT /formulario (update)
+ - DELETE /formulario
+```
+---
+### 5. Credenciales de phpMyAdmin
 
 Utiliza las siguientes credenciales para iniciar sesión en phpMyAdmin:
 
@@ -51,6 +74,9 @@ Utiliza las siguientes credenciales para iniciar sesión en phpMyAdmin:
 - **Usuario**: `root`
 - **Contraseña**: `root`
 
+### Códigos de Área Disponibles
+Los codigos de área disponibles son:
+101, 102, 103, 204, 215, 216, 355, 384, 399, 400
 ---
 
 ## Estructura del Proyecto
@@ -76,7 +102,6 @@ Utiliza las siguientes credenciales para iniciar sesión en phpMyAdmin:
 4. **Eliminar Registros**: Elimina registros.
 
 ---
-
 
 ```
 
