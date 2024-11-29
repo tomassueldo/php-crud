@@ -11,7 +11,7 @@
 <table id="recordsTable">
     <thead>
     <tr>
-        <th>ID</th> <!-- Añadido -->
+        <th>ID</th>
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Documento</th>
@@ -23,8 +23,8 @@
     </thead>
     <tbody>
     <?php foreach ($records as $record): ?>
-        <tr data-id="<?= htmlspecialchars($record['id']) ?>"> <!-- Añadido -->
-            <td><?= htmlspecialchars($record['id']) ?></td> <!-- Añadido -->
+        <tr data-id="<?= htmlspecialchars($record['id']) ?>">
+            <td><?= htmlspecialchars($record['id']) ?></td>
             <td><?= htmlspecialchars($record['nombre']) ?></td>
             <td><?= htmlspecialchars($record['apellido']) ?></td>
             <td><?= htmlspecialchars($record['documento']) ?></td>
@@ -41,12 +41,11 @@
 </table>
 
 
-<!-- Modal para editar -->
 <div id="editModal" class="modal">
     <div class="modal-content">
         <h3>Editar Registro</h3>
         <form id="editForm">
-            <input type="hidden" name="id"> <!-- Campo oculto para el ID -->
+            <input type="hidden" name="id">
             <label>Nombre:</label>
             <input type="text" name="nombre" required>
             <label>Apellido:</label>
@@ -64,7 +63,7 @@
     </div>
 </div>
 
-<!-- Modal para confirmar eliminación -->
+
 <div id="deleteModal" class="modal">
     <div class="modal-content">
         <h3>¿Estás seguro de que deseas eliminar este registro?</h3>

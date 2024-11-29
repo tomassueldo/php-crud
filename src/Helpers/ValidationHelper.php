@@ -7,6 +7,10 @@ use App\Helpers\ActionHelper;
 
 class ValidationHelper
 {
+    /**
+     * @param $data
+     * @return array
+     */
     public static function validate($data)
     {
         // Validar nombre
@@ -48,6 +52,10 @@ class ValidationHelper
         return ['success' => true, 'message' => 'Validación exitosa'];
     }
 
+    /**
+     * @param $email
+     * @return bool
+     */
     private static function validateEmail($email)
     {
         $regexUsuario = '/^[a-zA-Z0-9._-]+$/';

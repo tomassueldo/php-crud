@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentEditId = null;
     let currentDeleteId = null;
 
-    // Abrir el modal de edición
     document.querySelectorAll(".edit-btn").forEach((button) => {
         button.addEventListener("click", (e) => {
             const row = e.target.closest("tr");
@@ -69,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     confirmDeleteBtn.addEventListener("click", async () => {
         const response = await fetch(`/formulario`, {
             method: "DELETE",
-            body: JSON.stringify({ id: currentDeleteId }), // Incluye el ID en el cuerpo de la solicitud
+            body: JSON.stringify({ id: currentDeleteId }),
             headers: { "Content-Type": "application/json" },
         });
 
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Cerrar modales
     overlay.addEventListener("click", closeModals);
     document.getElementById("cancelDelete").addEventListener("click", closeModals);
 
