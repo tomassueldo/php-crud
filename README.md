@@ -88,6 +88,13 @@ Los codigos de área disponibles son: 101, 102, 103, 204, 215, 216, 355, 384, 39
 
 ---
 
+## Video de demostracion del funcionamiento del CRUD
+
+https://github.com/user-attachments/assets/009a5da0-5e7a-42fe-89d4-bc4b86df0076
+
+
+
+
 ## Explicación de la solución
 
 
