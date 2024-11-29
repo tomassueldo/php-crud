@@ -79,21 +79,6 @@ Los codigos de área disponibles son: 101, 102, 103, 204, 215, 216, 355, 384, 39
 
 ---
 
-## Estructura del Proyecto
-
-```
-├── app/                # Código PHP
-├── public/             # Carpeta pública (archivos accesibles desde el navegador)
-│   ├── css/            # Archivos CSS
-│   ├── js/             # Archivos JavaScript
-├── vendor/             # Dependencias instaladas por Composer
-├── Dockerfile          # Definición del contenedor PHP
-├── docker-compose.yml  # Configuración de Docker Compose
-├── README.md           # Instrucciones del proyecto
-```
-
----
-
 ## Funcionalidades de la Aplicación
 
 1. **Crear Registros**: Completa el formulario y envía los datos a la base de datos.
