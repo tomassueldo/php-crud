@@ -4,16 +4,16 @@ CREATE TABLE area
 );
 
 INSERT INTO area (codigo_area)
-VALUES (1),
-       (23),
-       (26),
-       (30),
-       (31),
-       (32),
-       (33),
-       (45),
-       (147),
-       (150);
+VALUES (101),
+       (102),
+       (103),
+       (204),
+       (215),
+       (216),
+       (355),
+       (384),
+       (399),
+       (400);
 
 CREATE TABLE formulario
 (

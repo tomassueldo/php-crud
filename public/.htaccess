@@ -1,0 +1,12 @@
+# modulo de reescritura de Apache, necesario para redirigir rutas dinamicas.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Si el archivo no existe
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Si el directorio no existe
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Redirige todas las solicitudes al archivo index.php
+    RewriteRule ^ index.php [L]
+</IfModule>

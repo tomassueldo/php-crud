@@ -1,0 +1,47 @@
+# Logs
+logs/
+*.log
+
+# Configuración y archivos sensibles
+.env
+.env.local
+.env.*.local
+
+# Dependencias de Composer
+/vendor/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos temporales
+*.tmp
+*.bak
+*.old
+
+# Docker
+docker-compose.override.yml
+db_data/
+sql/init.sql
+
+# Archivos de caché
+.cache/
+phpunit.result.cache
+/.phpunit.cache/
+
+# Archivos de sesión
+/sessions/
+
+# Archivos de cobertura de pruebas
+/coverage/
+
+# Archivos generados
+/public/storage/
+public/assets/
+storage/*.key

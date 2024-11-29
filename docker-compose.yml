@@ -1,29 +1,48 @@
-version: '3.8'
+version: '3'
 
 services:
-  php:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8080:80"
     volumes:
-      - ./public:/var/www/html
-    environment:
-      - DB_HOST=mysql
-      - DB_NAME=prueba-crud
-      - DB_USER=root
-      - DB_PASSWORD=root
+      - .:/var/www/html
     depends_on:
-      - mysql
-
-  mysql:
-    image: mysql:5.7
-    restart: always
-    ports:
-      - "3306:3306"
+      - db
     environment:
+      DB_HOST: db
+      DB_NAME: crud_db
+      DB_USER: root
+      DB_PASSWORD: root
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_DATABASE: crud_db
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: prueba-crud
+      TZ: "America/Argentina/Buenos_Aires"
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    container_name: my_db_container
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: '2g'
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - "9002:80"
+    environment:
+      - PMA_ARBITRARY=1
+    container_name: my_phpmyadmin_container
+
+
+volumes:
+  db_data:

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Formulario de Registro</h1>
+<form id="crudForm">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+
+    <label>Apellido:</label>
+    <input type="text" name="apellido" placeholder="Ingrese su apellido" required>
+
+    <label>Documento:</label>
+    <input type="text" name="documento" maxlength="10" placeholder="Solo números, máximo 10 caracteres" required>
+
+    <label>Código de Área:</label>
+    <input type="text" name="area" maxlength="3" placeholder="Solo 3 números" required>
+
+    <label>Teléfono:</label>
+    <input type="text" name="telefono" minlength="8" placeholder="Mínimo 8 números" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="ejemplo@dominio.com" required>
+
+    <button type="submit">Enviar</button>
+</form>
+<script src="/js/app.js"></script>
+
+</body>
+</html>
