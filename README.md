@@ -74,9 +74,9 @@ Utiliza las siguientes credenciales para iniciar sesión en phpMyAdmin:
 - **Usuario**: `root`
 - **Contraseña**: `root`
 
-### Códigos de Área Disponibles
-Los codigos de área disponibles son:
-101, 102, 103, 204, 215, 216, 355, 384, 399, 400
+Los codigos de área disponibles son: 101, 102, 103, 204, 215, 216, 355, 384, 399, 400
+
+
 ---
 
 ## Estructura del Proyecto
