@@ -40,9 +40,10 @@ class ValidationHelper
         }
 
         // Validar teléfono
-        if (!preg_match('/^\d{8,}$/', $data['telefono'])) {
-            return ['success' => false, 'message' => 'Teléfono inválido'];
+        if (!preg_match('/^\d{8,10}$/', $data['telefono'])) {
+            return ['success' => false, 'message' => 'Teléfono inválido. Debe tener entre 8 y 10 dígitos.'];
         }
+
 
         // Validar email
         if (!self::validateEmail($data['email'])) {
